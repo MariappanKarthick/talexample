@@ -2,3 +2,6 @@
 	path = antie
 	url = https://github.com/fmtvp/tal.git
 	branch = master
+[submodule "tal"]
+	path = tal
+	url = https://github.com/ultracrepidarian/tal.git
