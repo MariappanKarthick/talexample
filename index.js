@@ -26,7 +26,7 @@
 
 var express = require('express');
 var app = express();
-var AntieFramework = require('tal');
+var AntieFramework = require('./tal');
 var mustacheExpress = require('mustache-express');
 
 // Setup mustache for view templating
@@ -37,7 +37,7 @@ app.set('views', __dirname + '/views');
 app.get('/', function (req, res) {
 
   // Path to device configuration directory
-  var configPath = "node_modules/tal/config";
+  var configPath = "tal/config";
   var antie = new AntieFramework(configPath);
 
   // Get normalised brand and model from url parameters
@@ -72,7 +72,7 @@ app.get('/', function (req, res) {
   });
 });
 
-app.use('/tal', express.static('node_modules/tal'));
+app.use('/tal', express.static('tal'));
 app.use('/static', express.static('static'));
 
 app.listen(1337, function () {
