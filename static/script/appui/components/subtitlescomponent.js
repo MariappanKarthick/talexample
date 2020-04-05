@@ -4,18 +4,13 @@ define(
 		"antie/subtitles/timedtext",
 		"antie/subtitles/ttmlparser",
 		"antie/subtitles/errors/ttmlparseerror",
-		"antie/widgets/subtitles",
-		//"btplayer/utility/DeviceConfigUtils"
+		"antie/widgets/subtitles"
 	],
 	function (
 		TimedText,
 		TtmlParser,
 		TtmlParseError,
 		Subtitles
-		// DeviceConfigUtils,
-
-		// Label,
-		// ObjectFactory
 	)
 {
 	"use strict";
@@ -26,7 +21,7 @@ define(
 	 * @class
 	 * @extends antie.widgets.Subtitles
 	 */
-	var SubtitlesViewer = Subtitles.extend({
+	var SubtitlesComponent = Subtitles.extend({
 
 		/**
 		 * Constructor
@@ -82,29 +77,6 @@ define(
 		},
 
 		/**
-		 * Called when the playback bar's visiblity changes - adjusts the position
-		 * and size of the area where subtitles can be drawn based on the playback bar's position
-		 *
-		 * @param {Number} bottom
-		 * 			to set bottom of output element of subtitle viewer
-		 */
-		// onPlaybackBarVisibilityChange: function onPlaybackBarVisibilityChange(bottom) {
-		// 	var deviceHeight = DeviceConfigUtils.getDeviceConfig().layouts[0].height;
-
-		// 	// factor used to calculate the actual pixel value based on the screen resolution
-		// 	// value of the multiplier factor = 1.5 for screen res 1080p, 1 for screen res 720p
-		// 	var multiplier = deviceHeight/720;
-		// 	var verticalSafeArea = SubtitlesViewer.DEFAULT_VERTICAL_SAFE_AREA * multiplier;
-		// 	if(bottom === 0){
-		// 		this.outputElement.style.bottom = verticalSafeArea;
-		// 		this.outputElement.style.height = deviceHeight - 2 * verticalSafeArea;
-		// 	} else {
-		// 		this.outputElement.style.bottom = bottom;
-		// 		this.outputElement.style.height = deviceHeight - verticalSafeArea - bottom;
-		// 	}
-		// },
-
-		/**
 		 * Removes any event listeners and nullifies variables
 		 */
 		destroy: function destroy() {
@@ -113,7 +85,5 @@ define(
 		}
 	});
 
-	SubtitlesViewer.DEFAULT_VERTICAL_SAFE_AREA = 36;
-
-	return SubtitlesViewer;
+	return SubtitlesComponent;
 });
