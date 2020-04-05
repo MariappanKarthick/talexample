@@ -67,11 +67,18 @@ define(
           self.getCurrentApplication().pushComponent("maincontainer", "sampleapp/appui/components/horizontalprogresscomponent");
         });
 
+        var subtitlesButton = new Button();
+        subtitlesButton.addEventListener("select", function(evt){
+          self.getCurrentApplication().pushComponent("maincontainer", "sampleapp/appui/components/simplesubtitlesviewer");
+        });
+        subtitlesButton.appendChildWidget(new Label("Simple Subtitles Example"));
+
         // Create a vertical list and append the buttons to navigate within the list
         verticalListMenu = new VerticalList("mainMenuList");
         verticalListMenu.appendChildWidget(newCarouselButton);
         verticalListMenu.appendChildWidget(playerButton);
         verticalListMenu.appendChildWidget(horizontalProgressButton);
+        verticalListMenu.appendChildWidget(subtitlesButton);
         this.appendChildWidget(verticalListMenu);
 
         // calls Application.ready() the first time the component is shown

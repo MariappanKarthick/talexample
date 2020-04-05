@@ -66,6 +66,13 @@
     left: 235px;
 }
 
+#subtitlesPlayerButtons {
+    top: 130px;
+    width: 141px;
+    padding: 10px;
+    left: 1073px;
+}
+
 #carouselComponent > .carouselmask.horizontal {
     width: 960px;
 }
@@ -77,4 +84,11 @@
 
 #carouselComponent > .description {
     margin-bottom: 64px;
+}
+
+.subtitlesContainer{
+    position: absolute;
+    left: 250px;
+    bottom: 39px;
+    width: 780px;
 }
