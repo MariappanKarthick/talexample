@@ -11,8 +11,12 @@ An example TV application using the [TAL](https://www.github.com/bbc/tal) framew
 # Getting Started
 
 ```
-git clone git@github.com:bbc/talexample.git
-cd talexample
+git clone https://github.com/MariappanKarthick/talexample.git
+cd talexample/tal
+git submodule init
+git submodule update
+npm install
+cd ..
 npm install
 npm start
 ```
