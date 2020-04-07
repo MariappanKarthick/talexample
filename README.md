@@ -15,6 +15,7 @@ git clone https://github.com/MariappanKarthick/talexample.git
 cd talexample
 git submodule init
 git submodule update
+cd tal
 npm install
 cd ..
 npm install
